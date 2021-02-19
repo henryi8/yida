@@ -57,7 +57,7 @@ public class SysGeneratorController {
         tableNames = JSON.parseArray(tables).toArray(tableNames);
 
         byte[] data = sysGeneratorService.generatorCode(tableNames);
-        String fileName = "hdw_" + DateUtils.format(new Date(), "yyyyMMddHHmmss") + ".zip";
+        String fileName = "yida_" + DateUtils.format(new Date(), "yyyyMMddHHmmss") + ".zip";
         response.reset();
         response.setContentType("application/force-download");// 设置强制下载不打开
         response.addHeader("Content-Disposition", "attachment;fileName=" + fileName);// 设置文件名
