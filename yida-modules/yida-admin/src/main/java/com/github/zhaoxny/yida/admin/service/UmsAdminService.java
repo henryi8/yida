@@ -4,9 +4,9 @@ import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.github.zhaoxny.yida.admin.dto.UmsAdminParam;
 import com.github.zhaoxny.yida.admin.dto.UpdateAdminPasswordParam;
-import com.github.zhaoxny.yida.admin.entity.UmsAdmin;
-import com.github.zhaoxny.yida.admin.entity.UmsResource;
-import com.github.zhaoxny.yida.admin.entity.UmsRole;
+import com.github.zhaoxny.yida.model.entity.UmsAdmin;
+import com.github.zhaoxny.yida.model.entity.UmsResource;
+import com.github.zhaoxny.yida.model.entity.UmsRole;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.transaction.annotation.Transactional;
 

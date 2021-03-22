@@ -1,6 +1,6 @@
 package com.github.zhaoxny.yida.admin.controller;
 
-import com.github.zhaoxny.yida.admin.entity.UmsResourceCategory;
+import com.github.zhaoxny.yida.model.entity.UmsResourceCategory;
 import com.github.zhaoxny.yida.admin.service.UmsResourceCategoryService;
 import com.github.zhaoxny.yida.common.api.CommonResult;
 import io.swagger.annotations.Api;

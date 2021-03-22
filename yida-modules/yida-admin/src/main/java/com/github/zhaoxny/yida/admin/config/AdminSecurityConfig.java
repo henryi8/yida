@@ -1,6 +1,6 @@
 package com.github.zhaoxny.yida.admin.config;
 
-import com.github.zhaoxny.yida.admin.entity.UmsResource;
+import com.github.zhaoxny.yida.model.entity.UmsResource;
 import com.github.zhaoxny.yida.admin.security.component.DynamicSecurityService;
 import com.github.zhaoxny.yida.admin.security.config.SecurityConfig;
 import com.github.zhaoxny.yida.admin.service.UmsAdminService;

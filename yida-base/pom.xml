@@ -14,5 +14,6 @@
     <modules>
         <module>yida-auth-sdk</module>
         <module>yida-common</module>
+        <module>yida-model</module>
     </modules>
 </project>

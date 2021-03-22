@@ -1,6 +1,6 @@
 package com.github.zhaoxny.yida.admin.dto;
 
-import com.github.zhaoxny.yida.admin.entity.UmsMenu;
+import com.github.zhaoxny.yida.model.entity.UmsMenu;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;

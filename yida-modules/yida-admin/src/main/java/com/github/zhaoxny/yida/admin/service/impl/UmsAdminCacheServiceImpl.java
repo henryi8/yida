@@ -2,14 +2,14 @@ package com.github.zhaoxny.yida.admin.service.impl;
 
 import cn.hutool.core.collection.CollUtil;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.github.zhaoxny.yida.admin.entity.UmsAdmin;
-import com.github.zhaoxny.yida.admin.entity.UmsAdminRoleRelation;
-import com.github.zhaoxny.yida.admin.entity.UmsResource;
-import com.github.zhaoxny.yida.admin.mapper.UmsAdminMapper;
 import com.github.zhaoxny.yida.admin.redis.service.RedisService;
 import com.github.zhaoxny.yida.admin.service.UmsAdminCacheService;
 import com.github.zhaoxny.yida.admin.service.UmsAdminRoleRelationService;
 import com.github.zhaoxny.yida.admin.service.UmsAdminService;
+import com.github.zhaoxny.yida.model.entity.UmsAdmin;
+import com.github.zhaoxny.yida.model.entity.UmsAdminRoleRelation;
+import com.github.zhaoxny.yida.model.entity.UmsResource;
+import com.github.zhaoxny.yida.model.mapper.UmsAdminMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;

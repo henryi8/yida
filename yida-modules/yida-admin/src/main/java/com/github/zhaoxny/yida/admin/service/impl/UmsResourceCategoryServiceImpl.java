@@ -2,8 +2,8 @@ package com.github.zhaoxny.yida.admin.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.github.zhaoxny.yida.admin.mapper.UmsResourceCategoryMapper;
-import com.github.zhaoxny.yida.admin.entity.UmsResourceCategory;
+import com.github.zhaoxny.yida.model.mapper.UmsResourceCategoryMapper;
+import com.github.zhaoxny.yida.model.entity.UmsResourceCategory;
 import com.github.zhaoxny.yida.admin.service.UmsResourceCategoryService;
 import org.springframework.stereotype.Service;
 

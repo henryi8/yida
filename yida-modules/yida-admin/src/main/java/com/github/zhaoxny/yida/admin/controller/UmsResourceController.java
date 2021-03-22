@@ -1,7 +1,7 @@
 package com.github.zhaoxny.yida.admin.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.github.zhaoxny.yida.admin.entity.UmsResource;
+import com.github.zhaoxny.yida.model.entity.UmsResource;
 import com.github.zhaoxny.yida.admin.security.component.DynamicSecurityMetadataSource;
 import com.github.zhaoxny.yida.admin.service.UmsResourceService;
 import com.github.zhaoxny.yida.common.api.CommonPage;

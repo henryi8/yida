@@ -1,7 +1,8 @@
 package com.github.zhaoxny.yida.admin.service;
 
-import com.github.zhaoxny.yida.admin.entity.UmsAdmin;
-import com.github.zhaoxny.yida.admin.entity.UmsResource;
+
+import com.github.zhaoxny.yida.model.entity.UmsAdmin;
+import com.github.zhaoxny.yida.model.entity.UmsResource;
 
 import java.util.List;
 

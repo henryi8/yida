@@ -1,8 +1,8 @@
 package com.github.zhaoxny.yida.admin.service.impl;
 
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.github.zhaoxny.yida.admin.mapper.UmsRoleMenuRelationMapper;
-import com.github.zhaoxny.yida.admin.entity.UmsRoleMenuRelation;
+import com.github.zhaoxny.yida.model.mapper.UmsRoleMenuRelationMapper;
+import com.github.zhaoxny.yida.model.entity.UmsRoleMenuRelation;
 import com.github.zhaoxny.yida.admin.service.UmsRoleMenuRelationService;
 import org.springframework.stereotype.Service;
 
