@@ -1,7 +1,7 @@
 package com.github.zhaoxny.yida.search.service;
 
-import com.macro.mall.search.domain.EsProduct;
-import com.macro.mall.search.domain.EsProductRelatedInfo;
+import com.github.zhaoxny.yida.search.domain.EsProduct;
+import com.github.zhaoxny.yida.search.domain.EsProductRelatedInfo;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
@@ -50,4 +50,5 @@ public interface EsProductService {
      * 获取搜索词相关品牌、分类、属性
      */
     EsProductRelatedInfo searchRelatedInfo(String keyword);
+
 }

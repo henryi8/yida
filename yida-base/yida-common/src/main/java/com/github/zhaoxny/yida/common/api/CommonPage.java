@@ -1,7 +1,6 @@
 package com.github.zhaoxny.yida.common.api;
 
-import cn.hutool.core.convert.Convert;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import org.springframework.data.domain.Page;
 
 import java.util.List;
 
@@ -18,15 +17,15 @@ public class CommonPage<T> {
     private List<T> list;
 
     /**
-     * 将MyBatis Plus 分页结果转化为通用结果
+     * 将SpringData分页后的list转为分页信息
      */
-    public static <T> CommonPage<T> restPage(Page<T> pageResult) {
-        CommonPage<T> result = new CommonPage<>();
-        result.setPageNum(Convert.toInt(pageResult.getCurrent()));
-        result.setPageSize(Convert.toInt(pageResult.getSize()));
-        result.setTotal(pageResult.getTotal());
-        result.setTotalPage(Convert.toInt(pageResult.getTotal()/pageResult.getSize()+1));
-        result.setList(pageResult.getRecords());
+    public static <T> CommonPage<T> restPage(Page<T> pageInfo) {
+        CommonPage<T> result = new CommonPage<T>();
+        result.setTotalPage(pageInfo.getTotalPages());
+        result.setPageNum(pageInfo.getNumber());
+        result.setPageSize(pageInfo.getSize());
+        result.setTotal(pageInfo.getTotalElements());
+        result.setList(pageInfo.getContent());
         return result;
     }
 

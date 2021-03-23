@@ -1,10 +1,10 @@
 package com.github.zhaoxny.yida.search.service.impl;
 
-import com.macro.mall.search.dao.EsProductDao;
-import com.macro.mall.search.domain.EsProduct;
-import com.macro.mall.search.domain.EsProductRelatedInfo;
-import com.macro.mall.search.repository.EsProductRepository;
-import com.macro.mall.search.service.EsProductService;
+import com.github.zhaoxny.yida.search.dao.EsProductDao;
+import com.github.zhaoxny.yida.search.domain.EsProduct;
+import com.github.zhaoxny.yida.search.domain.EsProductRelatedInfo;
+import com.github.zhaoxny.yida.search.repository.EsProductRepository;
+import com.github.zhaoxny.yida.search.service.EsProductService;
 import org.elasticsearch.common.lucene.search.function.FunctionScoreQuery;
 import org.elasticsearch.index.query.BoolQueryBuilder;
 import org.elasticsearch.index.query.QueryBuilders;

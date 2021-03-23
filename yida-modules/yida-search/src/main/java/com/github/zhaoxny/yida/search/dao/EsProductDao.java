@@ -1,6 +1,6 @@
 package com.github.zhaoxny.yida.search.dao;
 
-import com.macro.mall.search.domain.EsProduct;
+import com.github.zhaoxny.yida.search.domain.EsProduct;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
