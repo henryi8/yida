@@ -1,13 +1,14 @@
 package com.github.zhaoxny.yida.search.service;
 
-import com.github.zhaoxny.yida.search.domain.EsProduct;
-import com.github.zhaoxny.yida.search.domain.EsProductRelatedInfo;
+import com.github.zhaoxny.yida.model.domain.EsProduct;
+import com.github.zhaoxny.yida.model.domain.EsProductRelatedInfo;
 import org.springframework.data.domain.Page;
 
 import java.util.List;
 
 /**
  * 商品搜索管理Service
+ *
  * @Author Henry on 2018/6/19.
  */
 public interface EsProductService {

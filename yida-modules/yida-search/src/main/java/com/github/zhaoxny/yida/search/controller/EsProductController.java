@@ -2,8 +2,8 @@ package com.github.zhaoxny.yida.search.controller;
 
 import com.github.zhaoxny.yida.common.api.CommonPage;
 import com.github.zhaoxny.yida.common.api.CommonResult;
-import com.github.zhaoxny.yida.search.domain.EsProduct;
-import com.github.zhaoxny.yida.search.domain.EsProductRelatedInfo;
+import com.github.zhaoxny.yida.model.domain.EsProduct;
+import com.github.zhaoxny.yida.model.domain.EsProductRelatedInfo;
 import com.github.zhaoxny.yida.search.service.EsProductService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiImplicitParam;
@@ -16,6 +16,7 @@ import java.util.List;
 
 /**
  * 搜索商品管理Controller
+ *
  * @Author Henry on 2018/6/19.
  */
 @RestController
@@ -63,7 +64,8 @@ public class EsProductController {
                                                       @RequestParam(required = false, defaultValue = "0") Integer pageNum,
                                                       @RequestParam(required = false, defaultValue = "5") Integer pageSize) {
         Page<EsProduct> esProductPage = esProductService.search(keyword, pageNum, pageSize);
-        return CommonResult.success(CommonPage.restPage(esProductPage));
+        esProductPage.getTotalPages();
+        return CommonResult.success(CommonPage.restPage(null));
     }
 
     @ApiOperation(value = "综合搜索、筛选、排序")
@@ -77,7 +79,7 @@ public class EsProductController {
                                                       @RequestParam(required = false, defaultValue = "5") Integer pageSize,
                                                       @RequestParam(required = false, defaultValue = "0") Integer sort) {
         Page<EsProduct> esProductPage = esProductService.search(keyword, brandId, productCategoryId, pageNum, pageSize, sort);
-        return CommonResult.success(CommonPage.restPage(esProductPage));
+        return CommonResult.success(CommonPage.restPage(null));
     }
 
     @ApiOperation(value = "根据商品id推荐商品")
@@ -86,7 +88,7 @@ public class EsProductController {
                                                          @RequestParam(required = false, defaultValue = "0") Integer pageNum,
                                                          @RequestParam(required = false, defaultValue = "5") Integer pageSize) {
         Page<EsProduct> esProductPage = esProductService.recommend(id, pageNum, pageSize);
-        return CommonResult.success(CommonPage.restPage(esProductPage));
+        return CommonResult.success(CommonPage.restPage(null));
     }
 
     @ApiOperation(value = "获取搜索的相关品牌、分类及筛选属性")

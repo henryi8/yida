@@ -1,4 +1,4 @@
-package com.github.zhaoxny.yida.search.domain;
+package com.github.zhaoxny.yida.model.domain;
 
 import org.springframework.data.elasticsearch.annotations.Field;
 import org.springframework.data.elasticsearch.annotations.FieldType;
@@ -7,6 +7,7 @@ import java.io.Serializable;
 
 /**
  * 搜索商品的属性信息
+ *
  * @Author Henry on 2018/6/27.
  */
 public class EsProductAttributeValue implements Serializable {
@@ -19,8 +20,9 @@ public class EsProductAttributeValue implements Serializable {
     //属性参数：0->规格；1->参数
     private Integer type;
     //属性名称
-    @Field(type=FieldType.Keyword)
+    @Field(type = FieldType.Keyword)
     private String name;
+
     public Long getId() {
         return id;
     }

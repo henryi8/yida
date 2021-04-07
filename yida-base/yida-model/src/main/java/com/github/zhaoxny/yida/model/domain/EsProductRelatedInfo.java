@@ -1,9 +1,10 @@
-package com.github.zhaoxny.yida.search.domain;
+package com.github.zhaoxny.yida.model.domain;
 
 import java.util.List;
 
 /**
  * 搜索商品的品牌名称，分类名称及属性
+ *
  * @Author Henry on 2018/6/27.
  */
 public class EsProductRelatedInfo {
@@ -35,7 +36,7 @@ public class EsProductRelatedInfo {
         this.productAttrs = productAttrs;
     }
 
-    public static class ProductAttr{
+    public static class ProductAttr {
         private Long attrId;
         private String attrName;
         private List<String> attrValues;

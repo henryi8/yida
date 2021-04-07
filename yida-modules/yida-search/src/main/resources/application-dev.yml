@@ -1,14 +1,6 @@
 spring:
-#  cloud:
-#    nacos:
-#      discovery:
-#        server-addr: http://localhost:8848
-#      config:
-#        server-addr: http://localhost:8848
-#        file-extension: yaml
-
   datasource:
-    url: jdbc:mysql://10.33.250.211:3306/mall?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://192.168.110.113:3306/yida?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai
     username: root
     password: 123456
     druid:
@@ -20,12 +12,8 @@ spring:
       stat-view-servlet: #访问监控网页的登录用户名和密码
         login-username: druid
         login-password: druid
-    main:
-      allow-bean-definition-overriding: true
   data:
     elasticsearch:
       repositories:
         enabled: true
-  elasticsearch:
-    rest:
-      uris: 10.33.250.211:9200
+      cluster-nodes: 127.0.0.1:9300

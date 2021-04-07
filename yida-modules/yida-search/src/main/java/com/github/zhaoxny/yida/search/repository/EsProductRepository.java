@@ -1,6 +1,6 @@
 package com.github.zhaoxny.yida.search.repository;
 
-import com.github.zhaoxny.yida.search.domain.EsProduct;
+import com.github.zhaoxny.yida.model.domain.EsProduct;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.elasticsearch.repository.ElasticsearchRepository;
