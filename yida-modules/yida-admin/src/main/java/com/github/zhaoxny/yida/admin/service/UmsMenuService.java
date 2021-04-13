@@ -3,7 +3,7 @@ package com.github.zhaoxny.yida.admin.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.github.zhaoxny.yida.admin.dto.UmsMenuNode;
+import com.github.zhaoxny.yida.model.domain.UmsMenuNode;
 import com.github.zhaoxny.yida.model.entity.UmsMenu;
 
 import java.util.List;

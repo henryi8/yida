@@ -1,11 +1,11 @@
 package com.github.zhaoxny.yida.admin.controller;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.github.zhaoxny.yida.admin.dto.UmsMenuNode;
-import com.github.zhaoxny.yida.model.entity.UmsMenu;
 import com.github.zhaoxny.yida.admin.service.UmsMenuService;
 import com.github.zhaoxny.yida.common.api.CommonPage;
 import com.github.zhaoxny.yida.common.api.CommonResult;
+import com.github.zhaoxny.yida.model.domain.UmsMenuNode;
+import com.github.zhaoxny.yida.model.entity.UmsMenu;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

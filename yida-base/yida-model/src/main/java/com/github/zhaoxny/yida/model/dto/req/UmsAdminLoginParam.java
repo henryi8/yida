@@ -1,4 +1,4 @@
-package com.github.zhaoxny.yida.admin.dto;
+package com.github.zhaoxny.yida.model.dto.req;
 
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;

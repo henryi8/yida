@@ -1,18 +1,17 @@
-package com.github.zhaoxny.yida.admin.dto;
+package com.github.zhaoxny.yida.model.domain;
 
 import com.github.zhaoxny.yida.model.entity.UmsMenu;
 import io.swagger.annotations.ApiModelProperty;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.List;
 
 /**
  * 后台菜单节点封装
+ *
  * @Author Henry
  */
-@Getter
-@Setter
+@Data
 public class UmsMenuNode extends UmsMenu {
     @ApiModelProperty(value = "子级菜单")
     private List<UmsMenuNode> children;

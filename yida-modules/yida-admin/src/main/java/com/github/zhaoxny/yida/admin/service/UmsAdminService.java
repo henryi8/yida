@@ -2,8 +2,8 @@ package com.github.zhaoxny.yida.admin.service;
 
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.IService;
-import com.github.zhaoxny.yida.admin.dto.UmsAdminParam;
-import com.github.zhaoxny.yida.admin.dto.UpdateAdminPasswordParam;
+import com.github.zhaoxny.yida.model.dto.req.UmsAdminParam;
+import com.github.zhaoxny.yida.model.dto.req.UpdateAdminPasswordParam;
 import com.github.zhaoxny.yida.model.entity.UmsAdmin;
 import com.github.zhaoxny.yida.model.entity.UmsResource;
 import com.github.zhaoxny.yida.model.entity.UmsRole;
