@@ -46,7 +46,7 @@ import java.util.stream.Collectors;
 /**
  * 商品搜索管理Service实现类
  *
- * @Author Henry on 2018/6/19.
+ * @Author Henry
  */
 @Service
 public class EsProductServiceImpl implements EsProductService {

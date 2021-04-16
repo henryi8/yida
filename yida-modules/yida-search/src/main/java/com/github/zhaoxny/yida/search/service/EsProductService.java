@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 商品搜索管理Service
  *
- * @Author Henry on 2018/6/19.
+ * @Author Henry
  */
 public interface EsProductService {
     /**

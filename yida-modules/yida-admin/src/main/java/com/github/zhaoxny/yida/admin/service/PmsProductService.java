@@ -13,7 +13,7 @@ import java.util.List;
 
 /**
  * 商品管理Service
- * Created by macro on 2018/4/26.
+ *  @Author Henry
  */
 public interface PmsProductService {
     /**

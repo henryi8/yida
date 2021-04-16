@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * 搜索商品的信息
  *
- * @Author Henry on 2018/6/19.
+ * @Author Henry
  */
 @Document(indexName = "pms", shards = 1, replicas = 0)
 public class EsProduct implements Serializable {

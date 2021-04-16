@@ -10,7 +10,7 @@ import java.util.List;
 
 /**
  * 添加更新产品分类的参数
- * Created by macro on 2018/4/26.
+ *  @Author Henry
  */
 @Data
 @EqualsAndHashCode(callSuper = false)

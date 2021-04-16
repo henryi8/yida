@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 /**
  * MyBatis相关配置
  *
- * @Author Henry on 2019/4/8.
+ * @Author Henry on 2019 8.
  */
 @Configuration
 @MapperScan({"com.github.zhaoxny.yida.*.mapper"})

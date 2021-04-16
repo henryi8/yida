@@ -26,7 +26,7 @@ import java.util.stream.Collectors;
 
 /**
  * 商品管理Service实现类
- * Created by macro on 2018/4/26.
+ *  @Author Henry
  */
 @Service
 public class PmsProductServiceImpl implements PmsProductService {

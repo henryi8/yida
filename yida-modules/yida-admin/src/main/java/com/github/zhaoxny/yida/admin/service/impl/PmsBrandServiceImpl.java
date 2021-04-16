@@ -19,7 +19,7 @@ import java.util.List;
 
 /**
  * 商品品牌Service实现类
- * Created by macro on 2018/4/26.
+ *  @Author Henry
  */
 @Service
 public class PmsBrandServiceImpl implements PmsBrandService {

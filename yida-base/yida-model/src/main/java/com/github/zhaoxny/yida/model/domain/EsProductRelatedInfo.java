@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * 搜索商品的品牌名称，分类名称及属性
  *
- * @Author Henry on 2018/6/27.
+ * @Author Henry  /6/27.
  */
 public class EsProductRelatedInfo {
     private List<String> brandNames;
