@@ -13,5 +13,6 @@
 
     <modules>
         <module>yida-monitor</module>
+        <module>yida-eureka</module>
     </modules>
 </project>
