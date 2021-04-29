@@ -4,24 +4,17 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.github.zhaoxny</groupId>
-        <artifactId>yida</artifactId>
+        <artifactId>yida-infrastructure</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-    <name>yida-eureka</name>
-    <description>Demo project for Spring Boot</description>
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
+
+    <artifactId>yida-eureka</artifactId>
+    <description>注册中心</description>
+
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-test</artifactId>
-            <scope>test</scope>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
         </dependency>
     </dependencies>
 

@@ -12,7 +12,14 @@
     <artifactId>yida-infrastructure</artifactId>
 
     <modules>
-        <module>yida-monitor</module>
         <module>yida-eureka</module>
+        <module>yida-monitor</module>
     </modules>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+        </dependency>
+    </dependencies>
 </project>
