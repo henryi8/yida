@@ -12,7 +12,9 @@
     <artifactId>yida-infrastructure</artifactId>
 
     <modules>
+        <module>yida-config</module>
         <module>yida-eureka</module>
+        <module>yida-gate</module>
         <module>yida-monitor</module>
     </modules>
 

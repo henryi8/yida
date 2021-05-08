@@ -48,3 +48,17 @@ secure:
       - /admin/register
       - /admin/info
       - /admin/logout
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    preferIpAddress: true
+    health-check-url-path: /application
+    status-page-url: http://${spring.cloud.client.hostname}:${server.port}/swagger-ui.html
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    registry-fetch-interval-seconds: 20
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+    eureka-server-connect-timeout-seconds: 5
