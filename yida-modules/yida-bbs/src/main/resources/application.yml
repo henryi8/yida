@@ -7,7 +7,6 @@ spring:
   profiles:
     active: dev
 
-
 eureka:
   instance:
     instance-id: ${spring.application.name}:${server.port}
