@@ -17,6 +17,7 @@
         <module>yida-generator</module>
         <module>yida-search</module>
         <module>yida-bbs</module>
+        <module>yida-dfs</module>
         <module>yida-product</module>
         <module>yida-order</module>
     </modules>
