@@ -34,8 +34,7 @@
     <modules>
         <module>yida-api</module><!---->
         <module>yida-base</module><!--公共资源-->
-        <module>yida-gate</module><!--网关-->
-        <module>yida-infrastructure</module><!--基础如Monitor-->
+        <module>yida-cloud-server</module><!--基础如Monitor-->
         <module>yida-modules</module><!--微服务模块-->
     </modules>
     <packaging>pom</packaging>

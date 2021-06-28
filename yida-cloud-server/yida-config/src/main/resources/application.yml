@@ -1,0 +1,12 @@
+spring:
+  application:
+    name: yida-config
+  cloud:
+    config:
+      label: master
+      server:
+        git:
+          uri: https://github.com/topsale/spring-cloud-config
+          search-paths: respo
+          username:
+          password:
