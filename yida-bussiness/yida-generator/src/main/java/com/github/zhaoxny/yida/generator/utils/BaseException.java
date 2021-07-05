@@ -1,11 +1,14 @@
 package com.github.zhaoxny.yida.generator.utils;
 
+import lombok.Data;
+
 /**
  * 自定义异常
  *
  * @Author Henry
  * @Date 2021年2月10日 11:25:17
  */
+@Data
 public class BaseException extends RuntimeException {
     private static final long serialVersionUID = 1L;
 
@@ -33,22 +36,5 @@ public class BaseException extends RuntimeException {
         this.msg = msg;
         this.code = code;
     }
-
-    public String getMsg() {
-        return msg;
-    }
-
-    public void setMsg(String msg) {
-        this.msg = msg;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
 
 }

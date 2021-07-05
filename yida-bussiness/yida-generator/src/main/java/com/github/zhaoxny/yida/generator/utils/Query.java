@@ -1,6 +1,8 @@
 package com.github.zhaoxny.yida.generator.utils;
 
 
+import lombok.Data;
+
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -10,6 +12,7 @@ import java.util.Map;
  * @Author Henry
  * @Date 2021年2月10日 11:25:56
  */
+@Data
 public class Query extends LinkedHashMap<String, Object> {
     private static final long serialVersionUID = 1L;
     //当前页码
@@ -27,20 +30,4 @@ public class Query extends LinkedHashMap<String, Object> {
         this.put("limit", limit);
     }
 
-
-    public int getPage() {
-        return page;
-    }
-
-    public void setPage(int page) {
-        this.page = page;
-    }
-
-    public int getLimit() {
-        return limit;
-    }
-
-    public void setLimit(int limit) {
-        this.limit = limit;
-    }
 }
