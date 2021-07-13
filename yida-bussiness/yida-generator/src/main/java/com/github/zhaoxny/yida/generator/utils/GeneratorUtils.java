@@ -31,30 +31,16 @@ public class GeneratorUtils {
     public static List<String> getTemplates() {
         List<String> templates = new ArrayList<String>();
 
-        // mybatisPlus3Dubbo
-        templates.add("template/mybatisPlus3Dubbo/Entity.java.vm");
-        templates.add("template/mybatisPlus3Dubbo/Mapper.java.vm");
-        templates.add("template/mybatisPlus3Dubbo/Mapper.xml.vm");
-        templates.add("template/mybatisPlus3Dubbo/Service.java.vm");
-        templates.add("template/mybatisPlus3Dubbo/ServiceImpl.java.vm");
-        templates.add("template/mybatisPlus3Dubbo/Controller.java.vm");
-
-        templates.add("template/mybatisPlus3Dubbo/menu.sql.vm");
-        templates.add("template/mybatisPlus3Dubbo/index.vue.vm");
-        templates.add("template/mybatisPlus3Dubbo/add-or-update.vue.vm");
-
         // mybatisPlus3
-//        templates.add("template/mybatisPlus3/Entity.java.vm");
-//        templates.add("template/mybatisPlus3/Mapper.java.vm");
-//        templates.add("template/mybatisPlus3/Mapper.xml.vm");
-//        templates.add("template/mybatisPlus3/Service.java.vm");
-//        templates.add("template/mybatisPlus3/ServiceImpl.java.vm");
-//        templates.add("template/mybatisPlus3/Controller.java.vm");
-//
-//        templates.add("template/mybatisPlus3/menu.sql.vm");
-//        templates.add("template/mybatisPlus3/index.vue.vm");
-//        templates.add("template/mybatisPlus3/add-or-update.vue.vm");
-
+        templates.add("template/noswagger/Entity.java.vm");
+        templates.add("template/noswagger/Mapper.java.vm");
+        templates.add("template/noswagger/Mapper.xml.vm");
+        templates.add("template/noswagger/Service.java.vm");
+        templates.add("template/noswagger/ServiceImpl.java.vm");
+        templates.add("template/noswagger/Controller.java.vm");
+        templates.add("template/noswagger/menu.sql.vm");
+        templates.add("template/noswagger/index.vue.vm");
+        templates.add("template/noswagger/add-or-update.vue.vm");
         return templates;
     }
 
@@ -114,7 +100,7 @@ public class GeneratorUtils {
         prop.put("file.resource.loader.class", "org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
         Velocity.init(prop);
         String mainPath = config.getString("mainPath");
-        mainPath = StringUtils.isBlank(mainPath) ? "io.renren" : mainPath;
+        mainPath = StringUtils.isBlank(mainPath) ? "com.github" : mainPath;
         //封装模板数据
         Map<String, Object> map = new HashMap<>();
         map.put("tableName", tableEntity.getTableName());
