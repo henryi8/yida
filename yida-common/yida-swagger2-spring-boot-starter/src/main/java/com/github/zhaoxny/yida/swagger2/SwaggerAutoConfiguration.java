@@ -24,6 +24,7 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 /**
+ * 自动配置类
  * @Author Henry
  */
 @Import({
@@ -42,7 +43,7 @@ public class SwaggerAutoConfiguration implements BeanFactoryAware {
 
     @Bean
     @ConditionalOnMissingBean
-    @ConditionalOnProperty(name = "mall.swagger.enabled", matchIfMissing = true)
+    @ConditionalOnProperty(name = "yida.swagger.enabled", matchIfMissing = true)
     public List<Docket> createRestApi(SwaggerProperties swaggerProperties) {
         ConfigurableBeanFactory configurableBeanFactory = (ConfigurableBeanFactory) beanFactory;
         List<Docket> docketList = new LinkedList<>();
