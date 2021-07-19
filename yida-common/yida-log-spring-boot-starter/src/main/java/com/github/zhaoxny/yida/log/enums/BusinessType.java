@@ -2,11 +2,10 @@ package com.github.zhaoxny.yida.log.enums;
 
 /**
  * 业务操作类型
- * 
- * @author ruoyi
+ *
+ * @Author Henry
  */
-public enum BusinessType
-{
+public enum BusinessType {
     /**
      * 其它
      */

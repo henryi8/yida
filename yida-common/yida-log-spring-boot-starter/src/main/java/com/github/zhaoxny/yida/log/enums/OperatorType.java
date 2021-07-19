@@ -2,11 +2,10 @@ package com.github.zhaoxny.yida.log.enums;
 
 /**
  * 操作人类别
- * 
- * @author ruoyi
+ *
+ * @Author Henry
  */
-public enum OperatorType
-{
+public enum OperatorType {
     /**
      * 其它
      */

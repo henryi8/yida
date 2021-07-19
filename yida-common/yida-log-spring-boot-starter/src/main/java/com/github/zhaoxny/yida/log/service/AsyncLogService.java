@@ -1,19 +1,18 @@
 package com.github.zhaoxny.yida.log.service;
 
-import com.ruoyi.system.api.RemoteLogService;
-import com.ruoyi.system.api.domain.SysOperLog;
+import com.github.zhaoxny.yida.api.remote.RemoteLogService;
+import com.github.zhaoxny.yida.common.entity.ums.SysOperLog;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 /**
  * 异步调用日志服务
- * 
- * @author ruoyi
+ *
+ * @Author Henry
  */
 @Service
-public class AsyncLogService
-{
+public class AsyncLogService {
     @Autowired
     private RemoteLogService remoteLogService;
 
@@ -21,8 +20,7 @@ public class AsyncLogService
      * 保存系统日志记录
      */
     @Async
-    public void saveSysLog(SysOperLog sysOperLog)
-    {
+    public void saveSysLog(SysOperLog sysOperLog) {
         remoteLogService.saveLog(sysOperLog);
     }
 }

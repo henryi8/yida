@@ -8,10 +8,24 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>yida-model</artifactId>
-    <description>Demo project for Spring Boot</description>
+    <artifactId>yida-log-spring-boot-starter</artifactId>
+    <description>日志工具包</description>
 
     <dependencies>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.zhaoxny</groupId>
+            <artifactId>yida-common-spring-boot-starter</artifactId>
+            <optional>true</optional><!--两个项目之间依赖不传递-->
+        </dependency>
+        <dependency>
+            <groupId>com.github.zhaoxny</groupId>
+            <artifactId>yida-api</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
 

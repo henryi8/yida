@@ -2,12 +2,10 @@ package com.github.zhaoxny.yida.log.enums;
 
 /**
  * 操作状态
- * 
- * @author ruoyi
  *
+ * @Author Henry
  */
-public enum BusinessStatus
-{
+public enum BusinessStatus {
     /**
      * 成功
      */
