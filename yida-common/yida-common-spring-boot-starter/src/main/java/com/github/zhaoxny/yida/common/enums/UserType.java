@@ -2,7 +2,7 @@ package com.github.zhaoxny.yida.common.enums;
 
 
 /**
- * @author mall
+ * @Author Henry
  * 用户类型
  */
 public enum UserType {

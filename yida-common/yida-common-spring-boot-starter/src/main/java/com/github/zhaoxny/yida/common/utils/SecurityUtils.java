@@ -1,23 +1,21 @@
 package com.github.zhaoxny.yida.common.utils;
 
-import com.ruoyi.common.core.constant.CacheConstants;
-import com.ruoyi.common.core.text.Convert;
+import com.github.zhaoxny.yida.common.constant.CacheConstants;
+import com.github.zhaoxny.yida.common.utils.text.Convert;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 import javax.servlet.http.HttpServletRequest;
 
 /**
  * 权限获取工具类
- * 
- * @author ruoyi
+ *
+ * @Author Henry
  */
-public class SecurityUtils
-{
+public class SecurityUtils {
     /**
      * 获取用户
      */
-    public static String getUsername()
-    {
+    public static String getUsername() {
         String username = ServletUtils.getRequest().getHeader(CacheConstants.DETAILS_USERNAME);
         return ServletUtils.urlDecode(username);
     }
@@ -25,27 +23,23 @@ public class SecurityUtils
     /**
      * 获取用户ID
      */
-    public static Long getUserId()
-    {
+    public static Long getUserId() {
         return Convert.toLong(ServletUtils.getRequest().getHeader(CacheConstants.DETAILS_USER_ID));
     }
 
     /**
      * 获取请求token
      */
-    public static String getToken()
-    {
+    public static String getToken() {
         return getToken(ServletUtils.getRequest());
     }
 
     /**
      * 根据request获取请求token
      */
-    public static String getToken(HttpServletRequest request)
-    {
+    public static String getToken(HttpServletRequest request) {
         String token = ServletUtils.getRequest().getHeader(CacheConstants.HEADER);
-        if (StringUtils.isNotEmpty(token) && token.startsWith(CacheConstants.TOKEN_PREFIX))
-        {
+        if (StringUtils.isNotEmpty(token) && token.startsWith(CacheConstants.TOKEN_PREFIX)) {
             token = token.replace(CacheConstants.TOKEN_PREFIX, "");
         }
         return token;
@@ -53,12 +47,11 @@ public class SecurityUtils
 
     /**
      * 是否为管理员
-     * 
+     *
      * @param userId 用户ID
      * @return 结果
      */
-    public static boolean isAdmin(Long userId)
-    {
+    public static boolean isAdmin(Long userId) {
         return userId != null && 1L == userId;
     }
 
@@ -68,8 +61,7 @@ public class SecurityUtils
      * @param password 密码
      * @return 加密字符串
      */
-    public static String encryptPassword(String password)
-    {
+    public static String encryptPassword(String password) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         return passwordEncoder.encode(password);
     }
@@ -77,12 +69,11 @@ public class SecurityUtils
     /**
      * 判断密码是否相同
      *
-     * @param rawPassword 真实密码
+     * @param rawPassword     真实密码
      * @param encodedPassword 加密后字符
      * @return 结果
      */
-    public static boolean matchesPassword(String rawPassword, String encodedPassword)
-    {
+    public static boolean matchesPassword(String rawPassword, String encodedPassword) {
         BCryptPasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
         return passwordEncoder.matches(rawPassword, encodedPassword);
     }

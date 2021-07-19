@@ -2,11 +2,10 @@ package com.github.zhaoxny.yida.common.constant;
 
 /**
  * 缓存的key 常量
- * 
- * @author ruoyi
+ *
+ * @Author Henry
  */
-public class CacheConstants
-{
+public class CacheConstants {
     /**
      * 令牌自定义标识
      */

@@ -1,6 +1,6 @@
 package com.github.zhaoxny.yida.common.exception;
 
-import com.github.zhaoxny.yida.common.dto.Result;
+import com.github.zhaoxny.yida.common.dto.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.access.AccessDeniedException;
@@ -26,7 +26,7 @@ public class DefaultExceptionAdvice {
      */
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler({IllegalArgumentException.class})
-    public Result badRequestException(IllegalArgumentException e) {
+    public R badRequestException(IllegalArgumentException e) {
         return defHandler("参数解析失败", e);
     }
 
@@ -36,7 +36,7 @@ public class DefaultExceptionAdvice {
      */
     @ResponseStatus(HttpStatus.FORBIDDEN)
     @ExceptionHandler({AccessDeniedException.class})
-    public Result badMethodExpressException(AccessDeniedException e) {
+    public R badMethodExpressException(AccessDeniedException e) {
         return defHandler("没有权限请求当前方法", e);
     }
 
@@ -45,7 +45,7 @@ public class DefaultExceptionAdvice {
      */
     @ResponseStatus(HttpStatus.METHOD_NOT_ALLOWED)
     @ExceptionHandler({HttpRequestMethodNotSupportedException.class})
-    public Result handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException e) {
+    public R handleHttpRequestMethodNotSupportedException(HttpRequestMethodNotSupportedException e) {
         return defHandler("不支持当前请求方法", e);
     }
 
@@ -54,7 +54,7 @@ public class DefaultExceptionAdvice {
      */
     @ResponseStatus(HttpStatus.UNSUPPORTED_MEDIA_TYPE)
     @ExceptionHandler({HttpMediaTypeNotSupportedException.class})
-    public Result handleHttpMediaTypeNotSupportedException(HttpMediaTypeNotSupportedException e) {
+    public R handleHttpMediaTypeNotSupportedException(HttpMediaTypeNotSupportedException e) {
         return defHandler("不支持当前媒体类型", e);
     }
 
@@ -63,7 +63,7 @@ public class DefaultExceptionAdvice {
      */
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler({SQLException.class})
-    public Result handleSQLException(SQLException e) {
+    public R handleSQLException(SQLException e) {
         return defHandler("服务运行SQLException异常", e);
     }
 
@@ -72,19 +72,19 @@ public class DefaultExceptionAdvice {
      * 返回状态码:500
      */
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
-    @ExceptionHandler(BusinessException.class)
-    public Result handleException(BusinessException e) {
+    @ExceptionHandler(CustomException.class)
+    public R handleException(CustomException e) {
         return defHandler("业务异常", e);
     }
 
     /**
-     * BusinessException 业务异常处理
-     * 返回状态码:500
+     * 幂等 异常处理
+     * 返回状态码:200
      */
     @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(IdempotencyException.class)
-    public Result handleException(IdempotencyException e) {
-        return Result.failed(e.getMessage());
+    public R handleException(IdempotencyException e) {
+        return defHandler(e.getMessage(), e);
     }
 
     /**
@@ -93,13 +93,13 @@ public class DefaultExceptionAdvice {
      */
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     @ExceptionHandler(Exception.class)
-    public Result handleException(Exception e) {
+    public R handleException(Exception e) {
         return defHandler("未知异常", e);
     }
 
-    private Result defHandler(String msg, Exception e) {
+    private R defHandler(String msg, Exception e) {
         log.error(msg, e);
-        return Result.failed(msg);
+        return R.fail(msg);
     }
 }
 

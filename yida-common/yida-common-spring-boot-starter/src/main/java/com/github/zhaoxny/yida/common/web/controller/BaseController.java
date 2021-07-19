@@ -2,14 +2,14 @@ package com.github.zhaoxny.yida.common.web.controller;
 
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import com.ruoyi.common.core.constant.HttpStatus;
-import com.ruoyi.common.core.utils.DateUtils;
-import com.ruoyi.common.core.utils.StringUtils;
-import com.ruoyi.common.core.utils.sql.SqlUtil;
-import com.ruoyi.common.core.web.domain.AjaxResult;
-import com.ruoyi.common.core.web.page.PageDomain;
-import com.ruoyi.common.core.web.page.TableDataInfo;
-import com.ruoyi.common.core.web.page.TableSupport;
+import com.github.zhaoxny.yida.common.constant.HttpStatus;
+import com.github.zhaoxny.yida.common.utils.DateUtils;
+import com.github.zhaoxny.yida.common.utils.StringUtils;
+import com.github.zhaoxny.yida.common.utils.sql.SqlUtil;
+import com.github.zhaoxny.yida.common.web.domain.AjaxResult;
+import com.github.zhaoxny.yida.common.web.page.PageDomain;
+import com.github.zhaoxny.yida.common.web.page.TableDataInfo;
+import com.github.zhaoxny.yida.common.web.page.TableSupport;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.WebDataBinder;
@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * web层通用数据处理
  *
- * @author ruoyi
+ * @Author Henry
  */
 public class BaseController {
     protected final Logger logger = LoggerFactory.getLogger(this.getClass());

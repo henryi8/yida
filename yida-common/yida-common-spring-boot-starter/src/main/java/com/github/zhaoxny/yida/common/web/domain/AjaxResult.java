@@ -1,14 +1,14 @@
 package com.github.zhaoxny.yida.common.web.domain;
 
-import com.ruoyi.common.core.constant.HttpStatus;
-import com.ruoyi.common.core.utils.StringUtils;
+import com.github.zhaoxny.yida.common.constant.HttpStatus;
+import com.github.zhaoxny.yida.common.utils.StringUtils;
 
 import java.util.HashMap;
 
 /**
  * 操作消息提醒
  *
- * @author ruoyi
+ * @Author Henry
  */
 public class AjaxResult extends HashMap<String, Object> {
     private static final long serialVersionUID = 1L;

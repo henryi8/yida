@@ -29,8 +29,8 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M,
      * 例子如下：
      * String username = sysUser.getUsername();
      * boolean result = super.saveIdempotency(sysUser, lock
-     *                 , LOCK_KEY_USERNAME+username
-     *                 , new QueryWrapper<SysUser>().eq("username", username));
+     * , LOCK_KEY_USERNAME+username
+     * , new QueryWrapper<SysUser>().eq("username", username));
      *
      * @param entity       实体对象
      * @param lock         锁实例
@@ -88,8 +88,8 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M,
      * 例子如下：
      * String username = sysUser.getUsername();
      * boolean result = super.saveOrUpdateIdempotency(sysUser, lock
-     *                 , LOCK_KEY_USERNAME+username
-     *                 , new QueryWrapper<SysUser>().eq("username", username));
+     * , LOCK_KEY_USERNAME+username
+     * , new QueryWrapper<SysUser>().eq("username", username));
      *
      * @param entity       实体对象
      * @param lock         锁实例
@@ -125,8 +125,8 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M,
      * 例子如下：
      * String username = sysUser.getUsername();
      * boolean result = super.saveOrUpdateIdempotency(sysUser, lock
-     *                 , LOCK_KEY_USERNAME+username
-     *                 , new QueryWrapper<SysUser>().eq("username", username));
+     * , LOCK_KEY_USERNAME+username
+     * , new QueryWrapper<SysUser>().eq("username", username));
      *
      * @param entity       实体对象
      * @param lock         锁实例
@@ -138,4 +138,5 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M,
     public boolean saveOrUpdateIdempotency(T entity, DistributedLock lock, String lockKey, Wrapper<T> countWrapper) {
         return this.saveOrUpdateIdempotency(entity, lock, lockKey, countWrapper, null);
     }
+
 }

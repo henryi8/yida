@@ -2,11 +2,10 @@ package com.github.zhaoxny.yida.common.constant;
 
 /**
  * 通用常量信息
- * 
- * @author ruoyi
+ *
+ * @Author Henry
  */
-public class Constants
-{
+public class Constants {
     /**
      * UTF-8 字符集
      */

@@ -3,7 +3,7 @@ package com.github.zhaoxny.yida.common.exception;
 /**
  * 基础异常
  *
- * @author ruoyi
+ * @Author Henry
  */
 public class BaseException extends RuntimeException {
     private static final long serialVersionUID = 1L;

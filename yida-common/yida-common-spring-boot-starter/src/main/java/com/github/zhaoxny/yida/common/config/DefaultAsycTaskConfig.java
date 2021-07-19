@@ -1,7 +1,6 @@
 package com.github.zhaoxny.yida.common.config;
 
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.core.task.TaskExecutor;
@@ -11,30 +10,28 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- * @author mall
- * @date 2018/12/13
+ * @Author Henry
  */
-@Setter
-@Getter
+@Data
 @EnableAsync(proxyTargetClass = true)
 public class DefaultAsycTaskConfig {
     /**
-     *  线程池维护线程的最小数量.
+     * 线程池维护线程的最小数量.
      */
     @Value("${asyc-task.corePoolSize:10}")
     private int corePoolSize;
     /**
-     *  线程池维护线程的最大数量
+     * 线程池维护线程的最大数量
      */
     @Value("${asyc-task.maxPoolSize:200}")
     private int maxPoolSize;
     /**
-     *  队列最大长度
+     * 队列最大长度
      */
     @Value("${asyc-task.queueCapacity:10}")
     private int queueCapacity;
     /**
-     *  线程池前缀
+     * 线程池前缀
      */
     @Value("${asyc-task.threadNamePrefix:ZltExecutor-}")
     private String threadNamePrefix;

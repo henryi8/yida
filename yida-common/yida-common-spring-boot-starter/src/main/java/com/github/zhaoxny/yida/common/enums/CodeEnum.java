@@ -2,6 +2,7 @@ package com.github.zhaoxny.yida.common.enums;
 
 /**
  * 成功&失败枚举
+ *
  * @Author: Henry
  */
 public enum CodeEnum {
@@ -9,7 +10,8 @@ public enum CodeEnum {
     ERROR(1);
 
     private Integer code;
-    CodeEnum(Integer code){
+
+    CodeEnum(Integer code) {
         this.code = code;
     }
 

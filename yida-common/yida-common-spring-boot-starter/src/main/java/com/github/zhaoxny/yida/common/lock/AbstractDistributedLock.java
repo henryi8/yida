@@ -6,7 +6,7 @@ package com.github.zhaoxny.yida.common.lock;
  * @Author Henry
  * @Date 2021年7月6日
  */
-public abstract class AbstractDistributedLock implements DistributedLock{
+public abstract class AbstractDistributedLock implements DistributedLock {
 
     @Override
     public boolean lock(String key) {
