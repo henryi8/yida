@@ -5,16 +5,17 @@
     <parent>
         <groupId>com.github.zhaoxny</groupId>
         <artifactId>yida</artifactId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>yida-api</artifactId>
-    <description></description>
+    <description>微服务调用api</description>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
+            <groupId>com.github.zhaoxny</groupId>
+            <artifactId>yida-common-spring-boot-starter</artifactId>
+            <optional>true</optional><!--两个项目之间依赖不传递-->
         </dependency>
     </dependencies>
 </project>

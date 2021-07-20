@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.zhaoxny.yida.api.factory.RemoteFileFallbackFactory,\
+  com.github.zhaoxny.yida.api.factory.RemoteLogFallbackFactory, \
+  com.github.zhaoxny.yida.api.factory.RemoteFileFallbackFactory
