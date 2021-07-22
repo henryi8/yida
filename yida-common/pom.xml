@@ -13,10 +13,11 @@
     <packaging>pom</packaging>
 
     <modules>
-        <module>yida-auth-sdk</module>
+        <module>yida-auth-spring-boot-starter</module>
         <module>yida-common-spring-boot-starter</module>
-        <module>yida-swagger2-spring-boot-starter</module>
-        <module>yida-model</module>
         <module>yida-db-spring-boot-starter</module>
+        <module>yida-log-spring-boot-starter</module>
+        <module>yida-redis-spring-boot-starter</module>
+        <module>yida-swagger2-spring-boot-starter</module>
     </modules>
 </project>
