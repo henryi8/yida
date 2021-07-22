@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Profile;
 
 /**
  * mybatis-plus配置
+ *
  * @Author Henry
  * @Date 2021年7月6日
  */
@@ -26,7 +27,7 @@ public class DefaultMybatisPlusConfig {
      * 设置 dev test 环境开启
      */
     @Bean
-    @Profile({"dev","test"})
+    @Profile({"dev", "test"})
     public PerformanceInterceptor performanceInterceptor() {
         return new PerformanceInterceptor();
     }

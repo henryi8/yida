@@ -27,6 +27,10 @@
             <artifactId>yida-common-spring-boot-starter</artifactId>
             <optional>true</optional><!--两个项目之间依赖不传递-->
         </dependency>
+        <dependency>
+            <groupId>com.github.zhaoxny</groupId>
+            <artifactId>yida-auth-spring-boot-starter</artifactId>
+        </dependency>
         <!-- Dynamic DataSource -->
         <dependency>
             <groupId>com.baomidou</groupId>

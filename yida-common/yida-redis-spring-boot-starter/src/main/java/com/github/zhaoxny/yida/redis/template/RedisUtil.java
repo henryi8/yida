@@ -5,6 +5,7 @@ import org.springframework.data.redis.connection.DataType;
 import org.springframework.data.redis.core.Cursor;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ScanOptions;
+import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.data.redis.core.ZSetOperations.TypedTuple;
 import org.springframework.stereotype.Service;
 
@@ -196,8 +197,9 @@ public class RedisUtil {
      * @param key
      * @return
      */
-    public String get(String key) {
-        return (String) redisTemplate.opsForValue().get(key);
+    public <T> T get(String key) {
+        ValueOperations<String, T> operation = redisTemplate.opsForValue();
+        return operation.get(key);
     }
 
     /**
@@ -265,7 +267,7 @@ public class RedisUtil {
      * @param unit    时间单位, 天:TimeUnit.DAYS 小时:TimeUnit.HOURS 分钟:TimeUnit.MINUTES
      *                秒:TimeUnit.SECONDS 毫秒:TimeUnit.MILLISECONDS
      */
-    public void setEx(String key, String value, long timeout, TimeUnit unit) {
+    public <T> void setEx(final String key, final T value, final long timeout, final TimeUnit unit) {
         redisTemplate.opsForValue().set(key, value, timeout, unit);
     }
 
