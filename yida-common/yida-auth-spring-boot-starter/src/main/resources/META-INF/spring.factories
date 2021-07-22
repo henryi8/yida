@@ -1,0 +1,4 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+  com.github.zhaoxny.yida.auth.service.TokenService,\
+  com.github.zhaoxny.yida.auth.aspect.PreAuthorizeAspect,\
+  com.github.zhaoxny.yida.auth.handler.GlobalExceptionHandler
