@@ -1,7 +1,5 @@
 package com.github.zhaoxny.yida.oms.service;
 
-import com.github.zhaoxny.yida.model.entity.OmsCompanyAddress;
-
 import java.util.List;
 
 /**
