@@ -25,10 +25,14 @@
             <groupId>com.github.zhaoxny</groupId>
             <artifactId>yida-db-spring-boot-starter</artifactId>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>com.mall</groupId>-->
-            <!--<artifactId>mall-redis-spring-boot-starter</artifactId>-->
-        <!--</dependency>-->
+        <dependency>
+            <groupId>com.github.zhaoxny</groupId>
+            <artifactId>yida-redis-spring-boot-starter</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.github.zhaoxny</groupId>
+            <artifactId>yida-log-spring-boot-starter</artifactId>
+        </dependency>
         <!--<dependency>-->
             <!--<groupId>com.mall</groupId>-->
             <!--<artifactId>mall-ribbon-spring-boot-starter</artifactId>-->

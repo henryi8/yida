@@ -1,17 +1,17 @@
 package com.github.zhaoxny.yida.ums.controller;
 
-import com.ruoyi.common.core.constant.CacheConstants;
-import com.ruoyi.common.core.utils.StringUtils;
-import com.ruoyi.common.core.web.controller.BaseController;
-import com.ruoyi.common.core.web.domain.AjaxResult;
-import com.ruoyi.common.core.web.page.TableDataInfo;
-import com.ruoyi.common.log.annotation.Log;
-import com.ruoyi.common.log.enums.BusinessType;
-import com.ruoyi.common.redis.service.RedisService;
-import com.ruoyi.common.security.annotation.PreAuthorize;
-import com.ruoyi.system.api.model.LoginUser;
-import com.ruoyi.system.domain.SysUserOnline;
-import com.ruoyi.system.service.ISysUserOnlineService;
+import com.github.zhaoxny.yida.auth.annotation.PreAuthorize;
+import com.github.zhaoxny.yida.common.constant.CacheConstants;
+import com.github.zhaoxny.yida.common.dto.ums.LoginUserVo;
+import com.github.zhaoxny.yida.common.entity.ums.SysUserOnline;
+import com.github.zhaoxny.yida.common.utils.StringUtils;
+import com.github.zhaoxny.yida.common.web.controller.BaseController;
+import com.github.zhaoxny.yida.common.web.domain.AjaxResult;
+import com.github.zhaoxny.yida.common.web.page.TableDataInfo;
+import com.github.zhaoxny.yida.log.annotation.Log;
+import com.github.zhaoxny.yida.log.enums.BusinessType;
+import com.github.zhaoxny.yida.redis.template.RedisUtil;
+import com.github.zhaoxny.yida.ums.service.ISysUserOnlineService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,51 +22,38 @@ import java.util.List;
 
 /**
  * 在线用户监控
- * 
- * @author ruoyi
+ *
+ * @Author Henry
  */
 @RestController
 @RequestMapping("/online")
-public class SysUserOnlineController extends BaseController
-{
+public class SysUserOnlineController extends BaseController {
     @Autowired
     private ISysUserOnlineService userOnlineService;
 
     @Autowired
-    private RedisService redisService;
+    private RedisUtil redisUtil;
 
     @PreAuthorize(hasPermi = "monitor:online:list")
     @GetMapping("/list")
-    public TableDataInfo list(String ipaddr, String userName)
-    {
-        Collection<String> keys = redisService.keys(CacheConstants.LOGIN_TOKEN_KEY + "*");
+    public TableDataInfo list(String ipaddr, String userName) {
+        Collection<String> keys = redisUtil.keys(CacheConstants.LOGIN_TOKEN_KEY + "*");
         List<SysUserOnline> userOnlineList = new ArrayList<SysUserOnline>();
-        for (String key : keys)
-        {
-            LoginUser user = redisService.getCacheObject(key);
-            if (StringUtils.isNotEmpty(ipaddr) && StringUtils.isNotEmpty(userName))
-            {
-                if (StringUtils.equals(ipaddr, user.getIpaddr()) && StringUtils.equals(userName, user.getUsername()))
-                {
+        for (String key : keys) {
+            LoginUserVo user = redisUtil.get(key);
+            if (StringUtils.isNotEmpty(ipaddr) && StringUtils.isNotEmpty(userName)) {
+                if (StringUtils.equals(ipaddr, user.getIpaddr()) && StringUtils.equals(userName, user.getUsername())) {
                     userOnlineList.add(userOnlineService.selectOnlineByInfo(ipaddr, userName, user));
                 }
-            }
-            else if (StringUtils.isNotEmpty(ipaddr))
-            {
-                if (StringUtils.equals(ipaddr, user.getIpaddr()))
-                {
+            } else if (StringUtils.isNotEmpty(ipaddr)) {
+                if (StringUtils.equals(ipaddr, user.getIpaddr())) {
                     userOnlineList.add(userOnlineService.selectOnlineByIpaddr(ipaddr, user));
                 }
-            }
-            else if (StringUtils.isNotEmpty(userName))
-            {
-                if (StringUtils.equals(userName, user.getUsername()))
-                {
+            } else if (StringUtils.isNotEmpty(userName)) {
+                if (StringUtils.equals(userName, user.getUsername())) {
                     userOnlineList.add(userOnlineService.selectOnlineByUserName(userName, user));
                 }
-            }
-            else
-            {
+            } else {
                 userOnlineList.add(userOnlineService.loginUserToUserOnline(user));
             }
         }
@@ -81,9 +68,8 @@ public class SysUserOnlineController extends BaseController
     @PreAuthorize(hasPermi = "monitor:online:forceLogout")
     @Log(title = "在线用户", businessType = BusinessType.FORCE)
     @DeleteMapping("/{tokenId}")
-    public AjaxResult forceLogout(@PathVariable String tokenId)
-    {
-        redisService.deleteObject(CacheConstants.LOGIN_TOKEN_KEY + tokenId);
+    public AjaxResult forceLogout(@PathVariable String tokenId) {
+        redisUtil.delete(CacheConstants.LOGIN_TOKEN_KEY + tokenId);
         return AjaxResult.success();
     }
 }
