@@ -10,7 +10,6 @@ import java.util.List;
  *
  * @Author Henry
  */
-@Mapper
 public interface SysDictTypeMapper {
     /**
      * 根据条件分页查询字典类型
