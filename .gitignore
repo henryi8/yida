@@ -4,8 +4,10 @@ target/
 # IDEA #
 .idea/
 *.iml
+.logs/
 
 # Eclipse #
 .settings/
 .classpath
 .project
+
