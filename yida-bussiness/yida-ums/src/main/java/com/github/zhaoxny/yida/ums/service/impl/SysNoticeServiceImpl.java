@@ -1,7 +1,7 @@
 package com.github.zhaoxny.yida.ums.service.impl;
 
 import com.github.zhaoxny.yida.common.entity.ums.SysNotice;
-import com.github.zhaoxny.yida.ums.mapper.SysNoticeMapper;
+import com.github.zhaoxny.yida.ums.dao.SysNoticeMapper;
 import com.github.zhaoxny.yida.ums.service.ISysNoticeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

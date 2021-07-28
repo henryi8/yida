@@ -7,7 +7,7 @@ import com.github.zhaoxny.yida.common.exception.CustomException;
 import com.github.zhaoxny.yida.common.utils.StringUtils;
 import com.github.zhaoxny.yida.common.utils.text.Convert;
 import com.github.zhaoxny.yida.redis.template.RedisUtil;
-import com.github.zhaoxny.yida.ums.mapper.SysConfigMapper;
+import com.github.zhaoxny.yida.ums.dao.SysConfigMapper;
 import com.github.zhaoxny.yida.ums.service.ISysConfigService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

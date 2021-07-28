@@ -1,7 +1,7 @@
 package com.github.zhaoxny.yida.ums.service.impl;
 
 import com.github.zhaoxny.yida.common.entity.ums.SysDictData;
-import com.github.zhaoxny.yida.ums.mapper.SysDictDataMapper;
+import com.github.zhaoxny.yida.ums.dao.SysDictDataMapper;
 import com.github.zhaoxny.yida.ums.service.ISysDictDataService;
 import com.github.zhaoxny.yida.ums.utils.DictUtils;
 import org.springframework.beans.factory.annotation.Autowired;

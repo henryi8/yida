@@ -1,7 +1,6 @@
-package com.github.zhaoxny.yida.ums.mapper;
+package com.github.zhaoxny.yida.ums.dao;
 
 import com.github.zhaoxny.yida.common.entity.ums.SysDictType;
-import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
 

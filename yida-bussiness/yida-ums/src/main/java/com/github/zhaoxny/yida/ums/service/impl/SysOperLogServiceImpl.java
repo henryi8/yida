@@ -1,7 +1,7 @@
 package com.github.zhaoxny.yida.ums.service.impl;
 
 import com.github.zhaoxny.yida.common.entity.ums.SysOperLog;
-import com.github.zhaoxny.yida.ums.mapper.SysOperLogMapper;
+import com.github.zhaoxny.yida.ums.dao.SysOperLogMapper;
 import com.github.zhaoxny.yida.ums.service.ISysOperLogService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

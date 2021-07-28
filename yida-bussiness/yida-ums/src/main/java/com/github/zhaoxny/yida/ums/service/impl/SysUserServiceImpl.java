@@ -6,7 +6,7 @@ import com.github.zhaoxny.yida.common.exception.CustomException;
 import com.github.zhaoxny.yida.common.utils.SecurityUtils;
 import com.github.zhaoxny.yida.common.utils.StringUtils;
 import com.github.zhaoxny.yida.db.annotation.DataScope;
-import com.github.zhaoxny.yida.ums.mapper.*;
+import com.github.zhaoxny.yida.ums.dao.*;
 import com.github.zhaoxny.yida.ums.service.ISysConfigService;
 import com.github.zhaoxny.yida.ums.service.ISysUserService;
 import org.slf4j.Logger;

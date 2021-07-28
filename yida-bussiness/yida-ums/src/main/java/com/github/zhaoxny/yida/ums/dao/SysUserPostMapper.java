@@ -1,4 +1,4 @@
-package com.github.zhaoxny.yida.ums.mapper;
+package com.github.zhaoxny.yida.ums.dao;
 
 import com.github.zhaoxny.yida.common.entity.ums.SysUserPost;
 

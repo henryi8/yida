@@ -1,7 +1,7 @@
 package com.github.zhaoxny.yida.ums.service.impl;
 
 import com.github.zhaoxny.yida.common.entity.ums.SysLogininfor;
-import com.github.zhaoxny.yida.ums.mapper.SysLogininforMapper;
+import com.github.zhaoxny.yida.ums.dao.SysLogininforMapper;
 import com.github.zhaoxny.yida.ums.service.ISysLogininforService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
