@@ -7,7 +7,7 @@ import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.data.redis.core.ScanOptions;
 import org.springframework.data.redis.core.ValueOperations;
 import org.springframework.data.redis.core.ZSetOperations.TypedTuple;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 import java.util.Map.Entry;
@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
  *
  * @Author Henry
  */
-@Service
+@Component
 public class RedisUtil {
     @Autowired
     private RedisTemplate redisTemplate;

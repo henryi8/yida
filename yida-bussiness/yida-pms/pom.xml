@@ -8,7 +8,7 @@
         <version>1.0.0</version>
     </parent>
 
-    <artifactId>yida-product</artifactId>
+    <artifactId>yida-pms</artifactId>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
