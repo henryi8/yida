@@ -5,27 +5,103 @@
     <parent>
         <artifactId>yida-bussiness</artifactId>
         <groupId>com.github.zhaoxny</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>yida-user</artifactId>
 
     <dependencies>
+        <!-- 公共实体类模块 -->
+        <!--<dependency>-->
+            <!--<groupId>com.github.zhaoxny</groupId>-->
+            <!--<artifactId>yida-common-spring-boot-starter</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.github.zhaoxny</groupId>-->
+            <!--<artifactId>yida-db-spring-boot-starter</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.github.zhaoxny</groupId>-->
+            <!--<artifactId>yida-redis-spring-boot-starter</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>com.github.zhaoxny</groupId>-->
+            <!--<artifactId>yida-log-spring-boot-starter</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>com.mall</groupId>-->
+        <!--<artifactId>mall-ribbon-spring-boot-starter</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>com.mall</groupId>-->
+        <!--<artifactId>mall-sentinel-spring-boot-starter</artifactId>-->
+        <!--</dependency>-->
+        <!-- swagger -->
+        <!--<dependency>-->
+            <!--<groupId>com.github.zhaoxny</groupId>-->
+            <!--<artifactId>yida-swagger2-spring-boot-starter</artifactId>-->
+        <!--</dependency>-->
+
+        <!-- SpringCloud Alibaba Nacos -->
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
+        <!-- SpringCloud Alibaba Nacos Config -->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!--监控 -->
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
     </dependencies>
 
-
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!--<plugin>-->
+            <!--<groupId>com.spotify</groupId>-->
+            <!--<artifactId>docker-maven-plugin</artifactId>-->
+            <!--<configuration>-->
+            <!--<imageName>${docker.image.prefix}/${project.artifactId}</imageName>-->
+            <!--<imageTags>-->
+            <!--<imageTag>${project.version}</imageTag>-->
+            <!--<imageTag>latest</imageTag>-->
+            <!--</imageTags>-->
+            <!--<forceTags>true</forceTags>-->
+            <!--<baseImage>${docker.baseImage}</baseImage>-->
+            <!--<volumes>${docker.volumes}</volumes>-->
+            <!--<env>-->
+            <!--<JAVA_OPTS>${docker.java.opts}</JAVA_OPTS>-->
+            <!--</env>-->
+            <!--<entryPoint>["sh","-c","java $JAVA_OPTS ${docker.java.security.egd} -jar /${project.build.finalName}.jar"]</entryPoint>-->
+            <!--<resources>-->
+            <!--<resource>-->
+            <!--<targetPath>/</targetPath>-->
+            <!--<directory>${project.build.directory}</directory>-->
+            <!--<include>${project.build.finalName}.jar</include>-->
+            <!--</resource>-->
+            <!--</resources>-->
+            <!--</configuration>-->
+            <!--</plugin>-->
+        </plugins>
+        <finalName>${project.artifactId}</finalName>
+    </build>
 </project>

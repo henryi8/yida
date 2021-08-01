@@ -3,7 +3,6 @@ package com.github.zhaoxny.yida.common.exception;
 import com.github.zhaoxny.yida.common.dto.R;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
-import org.springframework.security.access.AccessDeniedException;
 import org.springframework.web.HttpMediaTypeNotSupportedException;
 import org.springframework.web.HttpRequestMethodNotSupportedException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -34,11 +33,11 @@ public class DefaultExceptionAdvice {
      * AccessDeniedException异常处理返回json
      * 返回状态码:403
      */
-    @ResponseStatus(HttpStatus.FORBIDDEN)
-    @ExceptionHandler({AccessDeniedException.class})
-    public R badMethodExpressException(AccessDeniedException e) {
-        return defHandler("没有权限请求当前方法", e);
-    }
+//    @ResponseStatus(HttpStatus.FORBIDDEN)
+//    @ExceptionHandler({AccessDeniedException.class})
+//    public R badMethodExpressException(AccessDeniedException e) {
+//        return defHandler("没有权限请求当前方法", e);
+//    }
 
     /**
      * 返回状态码:405

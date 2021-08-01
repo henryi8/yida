@@ -1,6 +1,5 @@
 package com.github.zhaoxny.yida.common.web.service.impl;
 
-import cn.hutool.core.util.StrUtil;
 import com.baomidou.mybatisplus.core.conditions.Wrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.baomidou.mybatisplus.core.metadata.TableInfo;
@@ -44,7 +43,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M,
         if (lock == null) {
             throw new LockException("DistributedLock is null");
         }
-        if (StrUtil.isEmpty(lockKey)) {
+        if (StringUtils.isEmpty(lockKey)) {
             throw new LockException("lockKey is null");
         }
         try {
@@ -56,7 +55,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M,
                 if (count == 0) {
                     return super.save(entity);
                 } else {
-                    if (StrUtil.isEmpty(msg)) {
+                    if (StringUtils.isEmpty(msg)) {
                         msg = "已存在";
                     }
                     throw new IdempotencyException(msg);
@@ -106,7 +105,7 @@ public class SuperServiceImpl<M extends BaseMapper<T>, T> extends ServiceImpl<M,
             if (null != tableInfo && StringUtils.isNotEmpty(tableInfo.getKeyProperty())) {
                 Object idVal = ReflectionKit.getMethodValue(cls, entity, tableInfo.getKeyProperty());
                 if (StringUtils.checkValNull(idVal) || Objects.isNull(getById((Serializable) idVal))) {
-                    if (StrUtil.isEmpty(msg)) {
+                    if (StringUtils.isEmpty(msg)) {
                         msg = "已存在";
                     }
                     return this.saveIdempotency(entity, lock, lockKey, countWrapper, msg);

@@ -1,7 +1,0 @@
-
-# mybatis配置
-  # 搜索指定包别名
-  # 配置mapper的扫描，找到所有的mapper.xml映射文件
-mybatis-plus:
-  type-aliases-package: com.github.zhaoxny.yida.common.entity.ums
-  mapper-locations: classpath:/mapper/*.xml
