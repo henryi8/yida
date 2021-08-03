@@ -1,22 +1,22 @@
 package com.github.zhaoxny.yida.user;
 
-
-//import com.github.zhaoxny.yida.auth.annotation.EnableCustomConfig;
-//import com.github.zhaoxny.yida.auth.annotation.EnableRyFeignClients;
-//import com.github.zhaoxny.yida.swagger2.annotation.EnableCustomSwagger2;
+import com.github.zhaoxny.yida.auth.annotation.EnableRyFeignClients;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-//@EnableCustomConfig
-//@EnableCustomSwagger2
-//@EnableRyFeignClients
-@EnableDiscoveryClient
-@SpringBootApplication
+/**
+ * 认证授权中心
+ *
+ * @Author Henry
+ */
+@EnableRyFeignClients
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
 public class YidaUserApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(YidaUserApplication.class, args);
+        System.out.println("(♥◠‿◠)ﾉﾞ  用户模块启动成功   ლ(´ڡ`ლ)ﾞ");
     }
 
 }

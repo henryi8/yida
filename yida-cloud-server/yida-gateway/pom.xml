@@ -67,6 +67,12 @@
         <dependency>
             <groupId>com.github.zhaoxny</groupId>
             <artifactId>yida-common-spring-boot-starter</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-web</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- Swagger -->
