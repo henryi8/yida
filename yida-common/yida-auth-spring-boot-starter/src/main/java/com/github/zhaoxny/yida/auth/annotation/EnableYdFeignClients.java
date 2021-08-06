@@ -14,10 +14,10 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @EnableFeignClients
-public @interface EnableRyFeignClients {
+public @interface EnableYdFeignClients {
     String[] value() default {};
 
-    String[] basePackages() default {"com.github.zhaoxny.yida"};
+    String[] basePackages() default { "com.github.zhaoxny.yida" };
 
     Class<?>[] basePackageClasses() default {};
 
@@ -25,3 +25,4 @@ public @interface EnableRyFeignClients {
 
     Class<?>[] clients() default {};
 }
+

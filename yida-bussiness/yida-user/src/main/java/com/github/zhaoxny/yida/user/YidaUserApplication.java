@@ -1,6 +1,6 @@
 package com.github.zhaoxny.yida.user;
 
-import com.github.zhaoxny.yida.auth.annotation.EnableRyFeignClients;
+import com.github.zhaoxny.yida.auth.annotation.EnableYdFeignClients;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -10,8 +10,8 @@ import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
  *
  * @Author Henry
  */
-@EnableRyFeignClients
-@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class })
+@EnableYdFeignClients
+@SpringBootApplication(exclude = {DataSourceAutoConfiguration.class})
 public class YidaUserApplication {
 
     public static void main(String[] args) {

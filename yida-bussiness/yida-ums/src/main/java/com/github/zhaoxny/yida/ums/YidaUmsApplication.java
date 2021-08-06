@@ -1,14 +1,14 @@
 package com.github.zhaoxny.yida.ums;
 
 import com.github.zhaoxny.yida.auth.annotation.EnableCustomConfig;
-import com.github.zhaoxny.yida.auth.annotation.EnableRyFeignClients;
+import com.github.zhaoxny.yida.auth.annotation.EnableYdFeignClients;
 import com.github.zhaoxny.yida.swagger2.annotation.EnableCustomSwagger2;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @EnableCustomConfig
 @EnableCustomSwagger2
-@EnableRyFeignClients
+@EnableYdFeignClients
 @SpringBootApplication
 public class YidaUmsApplication {
 
