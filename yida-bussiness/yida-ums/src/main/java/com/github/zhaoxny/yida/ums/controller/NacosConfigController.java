@@ -11,13 +11,11 @@ public class NacosConfigController {
 
     @Value("${swagger.license}")
     public String env;
-    @Value("${share.config1}")
-    public String config1;
 
 
     @GetMapping("/nacos-config")
     public String nacosConfig() {
 
-        return env+config1;
+        return env;
     }
 }
