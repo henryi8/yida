@@ -5,6 +5,7 @@ import com.alibaba.fastjson.JSONObject;
 import com.github.zhaoxny.yida.common.constant.CacheConstants;
 import com.github.zhaoxny.yida.common.constant.Constants;
 import com.github.zhaoxny.yida.common.dto.R;
+import com.github.zhaoxny.yida.common.dto.ums.LoginUserVo;
 import com.github.zhaoxny.yida.common.utils.ServletUtils;
 import com.github.zhaoxny.yida.common.utils.StringUtils;
 import com.github.zhaoxny.yida.gateway.config.properties.IgnoreWhiteProperties;
@@ -43,8 +44,8 @@ public class AuthFilter implements GlobalFilter, Ordered {
     @Autowired
     private IgnoreWhiteProperties ignoreWhite;
 
-    @Resource(name = "stringRedisTemplate")
-    private ValueOperations<String, String> sops;
+//    @Resource(name = "stringRedisTemplate")
+//    private ValueOperations<String, String> sops;
 
     @Autowired
     private RedisUtil redisUtil;
@@ -60,21 +61,20 @@ public class AuthFilter implements GlobalFilter, Ordered {
         if (StringUtils.isBlank(token)) {
             return setUnauthorizedResponse(exchange, "令牌不能为空");
         }
-        String userStr = sops.get(getTokenKey(token));
-        if (StringUtils.isNull(userStr)) {
+        LoginUserVo userVo = redisUtil.get(getTokenKey(token));
+        if (userVo == null) {
             return setUnauthorizedResponse(exchange, "登录状态已过期");
         }
-        JSONObject obj = JSONObject.parseObject(userStr);
-        String userid = obj.getString("userid");
-        String username = obj.getString("username");
-        if (StringUtils.isBlank(userid) || StringUtils.isBlank(username)) {
+        Long userid = userVo.getUserid();
+        String username = userVo.getUsername();
+        if (userid == null || StringUtils.isBlank(username)) {
             return setUnauthorizedResponse(exchange, "令牌验证失败");
         }
 
         // 设置过期时间
         redisUtil.expire(getTokenKey(token), EXPIRE_TIME, TimeUnit.SECONDS);
         // 设置用户信息到请求
-        ServerHttpRequest mutableReq = exchange.getRequest().mutate().header(CacheConstants.DETAILS_USER_ID, userid)
+        ServerHttpRequest mutableReq = exchange.getRequest().mutate().header(CacheConstants.DETAILS_USER_ID, String.valueOf(userid))
                 .header(CacheConstants.DETAILS_USERNAME, ServletUtils.urlEncode(username)).build();
         ServerWebExchange mutableExchange = exchange.mutate().request(mutableReq).build();
 
