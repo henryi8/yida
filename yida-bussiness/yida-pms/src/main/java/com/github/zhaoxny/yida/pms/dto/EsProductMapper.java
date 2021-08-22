@@ -1,4 +1,4 @@
-package com.github.zhaoxny.yida.pms.dto;//package com.github.zhaoxny.yida.model.mapper;
+package com.github.zhaoxny.yida.pms.dto;//package com.github.zhaoxny.yida.model.dao;
 //
 //import com.github.zhaoxny.yida.model.domain.EsProduct;
 //import org.apache.ibatis.annotations.Param;

@@ -3,7 +3,7 @@ package com.github.zhaoxny.yida.db.mapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
- * mapper 父类，注意这个类不要让 mp 扫描到！！
+ * dao 父类，注意这个类不要让 mp 扫描到！！
  *
  * @Author Henry
  */

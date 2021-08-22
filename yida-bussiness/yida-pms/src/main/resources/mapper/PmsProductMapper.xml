@@ -932,10 +932,10 @@
         LEFT JOIN pms_product_attribute_value a ON a.product_id=p.id
         WHERE p.id=#{id};
     </select>
-    <!--<select id="selectSubjectProductRelationByProductId" resultMap="com.github.zhaoxny.yida.model.mapper.CmsSubjectProductRelationMapper.BaseResultMap">-->
+    <!--<select id="selectSubjectProductRelationByProductId" resultMap="com.github.zhaoxny.yida.model.dao.CmsSubjectProductRelationMapper.BaseResultMap">-->
           <!--select * from cms_subject_product_relation where product_id=#{productId}-->
       <!--</select>-->
-    <!--<select id="selectPrefrenceAreaProductRelationByProductId" resultMap="com.github.zhaoxny.yida.model.mapper.CmsPrefrenceAreaProductRelationMapper.BaseResultMap">-->
+    <!--<select id="selectPrefrenceAreaProductRelationByProductId" resultMap="com.github.zhaoxny.yida.model.dao.CmsPrefrenceAreaProductRelationMapper.BaseResultMap">-->
           <!--select * from cms_prefrence_area_product_relation where product_id=#{productId}-->
       <!--</select>-->
 </mapper>

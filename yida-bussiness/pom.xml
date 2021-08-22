@@ -14,13 +14,13 @@
 
     <modules>
         <module>yida-ums</module>
-        <module>yida-generator</module>
         <module>yida-search</module>
         <module>yida-bbs</module>
         <module>yida-dfs</module>
         <module>yida-pms</module>
         <module>yida-oms</module>
         <module>yida-user</module>
+        <module>yida-gen</module>
     </modules>
 
 </project>

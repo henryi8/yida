@@ -9,6 +9,6 @@
 // * @Author Henry on 2019 8.
 // */
 //@Configuration
-//@MapperScan({"com.github.zhaoxny.yida.*.mapper"})
+//@MapperScan({"com.github.zhaoxny.yida.*.dao"})
 //public class MyBatisConfig {
 //}

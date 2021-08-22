@@ -14,7 +14,7 @@ package com.github.zhaoxny.yida.pms.dto;//package com.github.zhaoxny.yida.model.
 // *
 // * @Author Henry
 // */
-//@Document(indexName = "mapper", shards = 1, replicas = 0)
+//@Document(indexName = "dao", shards = 1, replicas = 0)
 //public class EsProduct implements Serializable {
 //    private static final long serialVersionUID = -1L;
 //    @Id
