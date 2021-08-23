@@ -10,6 +10,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>yida-user</artifactId>
+    <description>权限模块</description>
 
     <dependencies>
         <!-- SpringCloud Alibaba Nacos -->
