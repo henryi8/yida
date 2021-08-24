@@ -1,7 +1,7 @@
 package com.github.zhaoxny.yida.gen.service.impl;
 
 import com.github.zhaoxny.yida.common.utils.text.Convert;
-import com.github.zhaoxny.yida.gen.domain.GenTableColumn;
+import com.github.zhaoxny.yida.common.entity.gen.GenTableColumn;
 import com.github.zhaoxny.yida.gen.dao.GenTableColumnMapper;
 import com.github.zhaoxny.yida.gen.service.IGenTableColumnService;
 import org.springframework.beans.factory.annotation.Autowired;

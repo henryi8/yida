@@ -4,8 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.github.zhaoxny.yida.common.constant.GenConstants;
 import com.github.zhaoxny.yida.common.utils.DateUtils;
 import com.github.zhaoxny.yida.common.utils.StringUtils;
-import com.github.zhaoxny.yida.gen.domain.GenTable;
-import com.github.zhaoxny.yida.gen.domain.GenTableColumn;
+import com.github.zhaoxny.yida.common.entity.gen.GenTable;
+import com.github.zhaoxny.yida.common.entity.gen.GenTableColumn;
 import org.apache.velocity.VelocityContext;
 
 import java.util.ArrayList;

@@ -3,8 +3,8 @@ package com.github.zhaoxny.yida.gen.util;
 import com.github.zhaoxny.yida.common.constant.GenConstants;
 import com.github.zhaoxny.yida.common.utils.StringUtils;
 import com.github.zhaoxny.yida.gen.config.GenConfig;
-import com.github.zhaoxny.yida.gen.domain.GenTable;
-import com.github.zhaoxny.yida.gen.domain.GenTableColumn;
+import com.github.zhaoxny.yida.common.entity.gen.GenTable;
+import com.github.zhaoxny.yida.common.entity.gen.GenTableColumn;
 import org.apache.commons.lang3.RegExUtils;
 
 import java.util.Arrays;

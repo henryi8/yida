@@ -1,6 +1,6 @@
 package com.github.zhaoxny.yida.gen.dao;
 
-import com.github.zhaoxny.yida.gen.domain.GenTable;
+import com.github.zhaoxny.yida.common.entity.gen.GenTable;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.github.zhaoxny.yida.gen.service;
 
-import com.github.zhaoxny.yida.gen.domain.GenTableColumn;
+import com.github.zhaoxny.yida.common.entity.gen.GenTableColumn;
 
 import java.util.List;
 

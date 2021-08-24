@@ -1,7 +1,7 @@
 package com.github.zhaoxny.yida.gen.service;
 
 
-import com.github.zhaoxny.yida.gen.domain.GenTable;
+import com.github.zhaoxny.yida.common.entity.gen.GenTable;
 
 import java.util.List;
 import java.util.Map;

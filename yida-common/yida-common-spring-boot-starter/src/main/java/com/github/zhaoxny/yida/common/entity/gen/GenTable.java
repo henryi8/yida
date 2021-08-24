@@ -1,4 +1,4 @@
-package com.github.zhaoxny.yida.gen.domain;
+package com.github.zhaoxny.yida.common.entity.gen;
 
 import com.github.zhaoxny.yida.common.constant.GenConstants;
 import com.github.zhaoxny.yida.common.utils.StringUtils;
