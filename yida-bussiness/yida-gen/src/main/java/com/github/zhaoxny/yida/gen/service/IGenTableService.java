@@ -119,4 +119,11 @@ public interface IGenTableService {
      * @param genTable 业务信息
      */
     public void validateEdit(GenTable genTable);
+
+    /**
+     * 查询所有yida库列表
+     * @return
+     */
+    public List<String> selectSchemaAll();
+
 }

@@ -64,7 +64,7 @@ public class GenController extends BaseController {
     }
 
     /**
-     * 查询数据库列表
+     * 查询当前数据库的表列表
      */
     @PreAuthorize(hasPermi = "tool:gen:list")
     @GetMapping("/db/list")
@@ -72,6 +72,16 @@ public class GenController extends BaseController {
         startPage();
         List<GenTable> list = genTableService.selectDbTableList(genTable);
         return getDataTable(list);
+    }
+
+    /**
+     * 查询数据库列表
+     */
+    @PreAuthorize(hasPermi = "tool:gen:list")
+    @GetMapping("/schema/list")
+    public AjaxResult schemaList() {
+        List<String> list = genTableService.selectSchemaAll();
+        return AjaxResult.success(list);
     }
 
     /**

@@ -78,7 +78,7 @@ public class GenTableServiceImpl implements IGenTableService {
     }
 
     /**
-     * 查询据库列表
+     * 查询据当前库表的列表
      *
      * @param genTable 业务信息
      * @return 数据库表集合
@@ -358,6 +358,15 @@ public class GenTableServiceImpl implements IGenTableService {
                 }
             }
         }
+    }
+
+    /**
+     * 查询所有yida库的列表
+     * @return
+     */
+    @Override
+    public List<String> selectSchemaAll() {
+        return genTableMapper.selectSchemaAll();
     }
 
     /**

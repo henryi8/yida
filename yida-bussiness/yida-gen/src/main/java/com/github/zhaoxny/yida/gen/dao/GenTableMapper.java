@@ -42,6 +42,12 @@ public interface GenTableMapper {
     public List<GenTable> selectGenTableAll();
 
     /**
+     * 查询所有yida库的列表
+     * @return
+     */
+    public List<String> selectSchemaAll();
+
+    /**
      * 查询表ID业务信息
      *
      * @param id 业务ID

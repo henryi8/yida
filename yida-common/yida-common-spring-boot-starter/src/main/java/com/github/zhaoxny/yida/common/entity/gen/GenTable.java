@@ -23,6 +23,11 @@ public class GenTable extends BaseEntity {
     private Long tableId;
 
     /**
+     * 库名
+     */
+    private String tableSchema;
+
+    /**
      * 表名称
      */
     @NotBlank(message = "表名称不能为空")
@@ -147,6 +152,14 @@ public class GenTable extends BaseEntity {
 
     public void setTableId(Long tableId) {
         this.tableId = tableId;
+    }
+
+    public String getTableSchema() {
+        return tableSchema;
+    }
+
+    public void setTableSchema(String tableSchema) {
+        this.tableSchema = tableSchema;
     }
 
     public String getTableName() {
