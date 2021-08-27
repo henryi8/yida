@@ -107,9 +107,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select table_schema,table_name, table_comment, create_time, update_time from information_schema.tables
 		where table_name NOT LIKE 'qrtz_%' and table_name NOT LIKE 'gen_%'
 		and table_schema in (SELECT `SCHEMA_NAME` FROM `information_schema`.`SCHEMATA` WHERE SCHEMA_NAME LIKE 'yida%')
-		and table_name in
-	    <foreach collection="array" item="name" open="(" separator="," close=")">
- 			#{name}
+	    <foreach collection="genTables" item="name" open="AND (" separator="or" close=")">
+			table_name = #{name.tableName}
+			AND lower(table_schema) = lower(#{name.tableSchema})
         </foreach> 
 	</select>
 

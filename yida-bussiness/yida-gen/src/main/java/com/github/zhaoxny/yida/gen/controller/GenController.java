@@ -102,10 +102,10 @@ public class GenController extends BaseController {
     @PreAuthorize(hasPermi = "tool:gen:import")
     @Log(title = "代码生成", businessType = BusinessType.IMPORT)
     @PostMapping("/importTable")
-    public AjaxResult importTableSave(String tables) {
-        String[] tableNames = Convert.toStrArray(tables);
+    public AjaxResult importTableSave(@RequestBody List<GenTable> genTables) {
+//        String[] tableNames = Convert.toStrArray(tables);
         // 查询表信息
-        List<GenTable> tableList = genTableService.selectDbTableListByNames(tableNames);
+        List<GenTable> tableList = genTableService.selectDbTableListByNames(genTables);
         genTableService.importGenTable(tableList);
         return AjaxResult.success();
     }
@@ -193,7 +193,7 @@ public class GenController extends BaseController {
      */
     private void genCode(HttpServletResponse response, byte[] data) throws IOException {
         response.reset();
-        response.setHeader("Content-Disposition", "attachment; filename=\"ruoyi.zip\"");
+        response.setHeader("Content-Disposition", "attachment; filename=\"yida.zip\"");
         response.addHeader("Content-Length", "" + data.length);
         response.setContentType("application/octet-stream; charset=UTF-8");
         IOUtils.write(data, response.getOutputStream());

@@ -20,7 +20,7 @@ public class GenUtils {
      */
     public static void initTable(GenTable genTable, String operName) {
         genTable.setClassName(convertClassName(genTable.getTableName()));
-        genTable.setPackageName(GenConfig.getPackageName());
+        genTable.setPackageName(getPackage(genTable.getTableSchema()));
         genTable.setModuleName(getModuleName(GenConfig.getPackageName()));
         genTable.setBusinessName(getBusinessName(genTable.getTableName()));
         genTable.setFunctionName(replaceText(genTable.getTableComment()));
@@ -119,6 +119,19 @@ public class GenUtils {
      */
     public static boolean arraysContains(String[] arr, String targetValue) {
         return Arrays.asList(arr).contains(targetValue);
+    }
+
+    /**
+     * 获取包名
+     * @param tableSchema 数据库判断
+     * @return
+     */
+    public static String getPackage(String tableSchema){
+        int index = tableSchema.indexOf("_");
+        int nameLength = tableSchema.length();
+        String packName = GenConfig.getPackageName() + "."
+                + StringUtils.substring(tableSchema, index + 1, nameLength);
+        return packName;
     }
 
     /**

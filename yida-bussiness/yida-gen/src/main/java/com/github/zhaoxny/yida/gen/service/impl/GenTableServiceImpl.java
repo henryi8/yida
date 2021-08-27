@@ -91,12 +91,12 @@ public class GenTableServiceImpl implements IGenTableService {
     /**
      * 查询据库列表
      *
-     * @param tableNames 表名称组
+     * tableNames 表名称组
      * @return 数据库表集合
      */
     @Override
-    public List<GenTable> selectDbTableListByNames(String[] tableNames) {
-        return genTableMapper.selectDbTableListByNames(tableNames);
+    public List<GenTable> selectDbTableListByNames(List<GenTable> genTables) {
+        return genTableMapper.selectDbTableListByNames(genTables);
     }
 
     /**

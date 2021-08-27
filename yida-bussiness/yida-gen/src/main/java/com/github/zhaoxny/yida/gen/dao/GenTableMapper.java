@@ -1,6 +1,7 @@
 package com.github.zhaoxny.yida.gen.dao;
 
 import com.github.zhaoxny.yida.common.entity.gen.GenTable;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -29,10 +30,10 @@ public interface GenTableMapper {
     /**
      * 查询据库列表
      *
-     * @param tableNames 表名称组
+     *   表名称组, 库名称
      * @return 数据库表集合
      */
-    public List<GenTable> selectDbTableListByNames(String[] tableNames);
+    public List<GenTable> selectDbTableListByNames(@Param("genTables") List<GenTable> genTables);
 
     /**
      * 查询所有表信息
